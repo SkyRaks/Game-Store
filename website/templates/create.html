@@ -1,0 +1,28 @@
+{% extends "base.html" %} {% block title %}Create{% endblock%}
+
+{% block content%}
+<div class="col-9 mx-auto my-4">
+  <form method="post" enctype="multipart/form-data">
+        <h3 align="center">
+            Create Games
+        </h3>
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Enter Name">
+        </div>
+        <div class="form-group">
+            <label for="price">Price</label>
+            <input type="text" class="form-control" id="price" name="price" placeholder="Enter Price">
+        </div>
+        <div class="form-group">
+            <label for="description">Description</label>
+            <textarea type="text" name="description" id="description" class="form-control" placeholder="Enter Description"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="score">Games Score</label>
+            <input type="range" class="form-range" min="1" max="10" name="score" id="score">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+{% endblock %}

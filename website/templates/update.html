@@ -1,0 +1,28 @@
+{% extends "base.html" %} {% block title %}Update{% endblock %}
+
+{% block content %}
+<div class="col-9 mx-auto my-4">
+  <form method="post">
+        <h3 align="center">
+            Update Game
+        </h3>
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" name="name" id="name" value="{{game.name}}" placeholder="Enter Name">
+        </div>
+        <div class="form-group">
+            <label for="price">Price</label>
+            <input type="text" class="form-control" name="price" id="price" value="{{game.price}}" placeholder="Enter Price">
+        </div>
+        <div class="form-group">
+            <label for="description">Description</label>
+            <input type="text" class="form-control" name="description" id="description" value="{{game.description}}" placeholder="Enter Description">
+        </div>
+        <div class="form-group">
+            <label for="score">Games Score</label>
+            <input type="range" class="form-range" min="1" max="10" name="score" id="score" value="{{game.score}}">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+{% endblock %}
